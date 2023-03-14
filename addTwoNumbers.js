@@ -22,12 +22,15 @@ var addTwoNumbers = function(l1, l2) {
         let num2 = l2?.val ?? 0;
 
         console.log(num1, num2);
+        const sum = num1 + num2;
+        console.log(sum);
 
+       
         if (l1) {
-            l1 - l1.next;
+            l1 = l1.next;
         }
         if (l2) {
-            l2 - l2.next;
+            l2 = l2.next;
         }
     }
 };
