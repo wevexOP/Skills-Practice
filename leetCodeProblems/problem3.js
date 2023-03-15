@@ -3,7 +3,8 @@
  * @return {number}
  */
 
- const isUnique = (s) => {
+/* This code is too slow to be accepted by leet code. This is considered to be a 'brute force method'. */
+ /* const isUnique = (s) => {
     const set = new Set()
     for (let i=0;i<s.length;i++) {
         if(set.has(s[i])){
@@ -25,4 +26,5 @@ var lengthOfLongestSubstring = function(s) {
             }
         }
         return max;
-};
+}; */
+
