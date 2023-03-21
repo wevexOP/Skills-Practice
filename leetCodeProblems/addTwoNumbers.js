@@ -51,5 +51,3 @@ var addTwoNumbers = function(l1, l2) {
     /*returns the original ListNode with the .next attached to it that is the sum function completed */
     return dummy.next;
 };
-
-/* solved */
