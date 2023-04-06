@@ -4,27 +4,26 @@
  * @return {string}
  */
  var convert = function(s, numRows) {
-    // set up and open arr
-    const result = [];
+    // if numRows is 1, return s
+    if (numRows === 1) return s;
 
-    // if numRows is less than 2, return s
-    if (numRows < 2) {
-        return s;
-    }
-
-    // create a for loop to iterate through numRows
+    //let n = s.length;
+    let n = s.length;
+    //let res = '';
+    let res = '';
+    // create a for loop to iterate through the number of rows
     for (let i = 0; i < numRows; i++) {
-        let j = i;
-        //while j is less than s.length
-        while (j < s.length) {
-            // push s[j] into result[i]
-            result[i].push(s[j]);
-            // if i is not 0 and i is not numRows - 1
-            if (i !== 0 && i !== numRows - 1) {
-                //const k = j + (numRows - i - 1) * 2;
-                // push s[k] into result[i]
-                // push s[j + (numRows - i - 1) * 2] into result[i]
-                result[i].push(s[j + (numRows - i - 1) * 2]);
+        // create a for loop to iterate through the length of the string
+        for (let j = 0; j + i < n; j += 2 * numRows - 2) {
+            // add s[j + i] to res
+            res += s[j + i];
+            // if i is not 0 or numRows - 1, add s[j + 2 * numRows - 2 - i] to res
+            if (i !== 0 && i !== numRows - 1 && j + 2 * numRows - 2 - i < n) {
+                res += s[j + 2 * numRows - 2 - i];
             }
+        }
     }
+    // return res
+    return res;
+    
 };
