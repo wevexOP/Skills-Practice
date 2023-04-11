@@ -18,3 +18,6 @@
         revNum = revNum * -1;
     }
 };
+// the code above fails the test cases because it does not account for the fact that the number could be negative
+// Runtime: 76 ms, faster than 99.99% of JavaScript online submissions for Reverse Integer.     
+// Memory Usage: 40.1 MB, less than 5.00% of JavaScript online submissions for Reverse Integer.
